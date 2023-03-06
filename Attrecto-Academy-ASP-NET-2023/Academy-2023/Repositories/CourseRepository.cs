@@ -38,8 +38,7 @@ namespace Academy_2023.Repositories
             {
                 if (course.Id == id)
                 {
-                    course.FirstName = data.FirstName;
-                    course.LastName = data.LastName;
+                    course.Name = data.Name;
                     course.Description = data.Description;
 
                     return course;

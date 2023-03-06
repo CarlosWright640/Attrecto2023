@@ -18,14 +18,14 @@ namespace Academy_2023.Controllers
             _courseRepository = new CourseRepository();
         }
 
-        // GET: api/<UsersController>
+        // GET: api/<CourseController>
         [HttpGet]
         public IEnumerable<Course> Get()
         {
             return _courseRepository.GetAll();
         }
 
-        // GET api/<UsersController>/5
+        // GET api/<CourseController>/5
         [HttpGet("{id}")]
         public ActionResult<Course> Get(int id)
         {
@@ -34,7 +34,7 @@ namespace Academy_2023.Controllers
             return course == null ? NotFound() : course;
         }
 
-        // POST api/<UsersController>
+        // POST api/<CourseController>
         [HttpPost]
         public ActionResult Post([FromBody] Course data)
         {
@@ -48,7 +48,7 @@ namespace Academy_2023.Controllers
             return NoContent();
         }
 
-        // PUT api/<UsersController>/5
+        // PUT api/<CourseController>/5
         [HttpPut("{id}")]
         public ActionResult Put(int id, [FromBody]Course data)
         {
@@ -57,7 +57,7 @@ namespace Academy_2023.Controllers
             return course == null ? NotFound() : NoContent();
         }
 
-        // DELETE api/<UsersController>/5
+        // DELETE api/<CourseController>/5
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
