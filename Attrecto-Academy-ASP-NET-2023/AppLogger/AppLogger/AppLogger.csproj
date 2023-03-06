@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <OutputType>Library</OutputType>
+    <PackageId>Calculator.Attrecto</PackageId>
+    <Authors>RádliDorián</Authors>
+    <Company>RádliDorián</Company>
+    <Product>EasyCalculator</Product>
+    <Description>Attrecto 2023.03.07 Tuesday.</Description>
+    <RepositoryUrl>https://github.com/CarlosWright640/Attrecto2023/tree/main/Attrecto-Academy-ASP-NET-2023</RepositoryUrl>
+    <PackageTags>Easy, Calculator, 20230306</PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="PackageLicenseExpression.csproj" />
+    <None Include="README.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Calculator.Attrecto</id>
+    <version>1.0.0</version>
+    <authors>RádliDorián</authors>
+    <description>Attrecto 2023.03.07 Tuesday.</description>
+    <tags>Easy, Calculator, 20230306</tags>
+    <repository url="https://github.com/CarlosWright640/Attrecto2023/tree/main/Attrecto-Academy-ASP-NET-2023" />
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Dorián\source\repos\AppLogger\AppLogger\bin\Debug\net6.0\AppLogger.dll" target="lib\net6.0\AppLogger.dll" />
+  </files>
+</package>
