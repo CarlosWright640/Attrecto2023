@@ -8,57 +8,53 @@ namespace Academy_2023.Repositories
     public class CourseRepository
     {
         public static List<Course> Courses = new List<Course>();
+        private readonly ApplicationDbContext _context = new ApplicationDbContext();
 
         public IEnumerable<Course> GetAll()
         {
-            return Courses;
+            return _context.Courses.ToList();
         }
 
         public Course? GetById(int id)
         {
-            foreach (var course in Courses)
-            {
-                if (course.Id == id)
-                {
-                    return course;
-                }
-            }
-
-            return null;
+            return _context.Courses.FirstOrDefault(x => x.Id == id);
         }
 
         public void Create(Course data)
         {
-            Courses.Add(data);
+            _context.Courses.Add(data);
+
+            _context.SaveChanges();
         }
 
         public Course? Update(int id, Course data)
         {
-            foreach (var course in Courses)
-            {
-                if (course.Id == id)
-                {
-                    course.Name = data.Name;
-                    course.Description = data.Description;
+            var course = _context.Courses.FirstOrDefault(x => x.Id == id);
 
-                    return course;
-                }
+            if (course != null)
+            {
+                course.Title = data.Title;
+                course.Description = data.Description;
+                course.Url = data.Url;
+
+                _context.SaveChanges();
             }
 
-            return null;
+            return course;
         }
 
 
         public bool Delete(int id)
         {
-            foreach (var course in Courses)
-            {
-                if (course.Id == id)
-                {
-                    Courses.Remove(course);
+            var course = _context.Courses.FirstOrDefault(x => x.Id == id);
 
-                    return true;
-                }
+            if (course != null)
+            {
+                _context.Courses.Remove(course);
+
+                _context.SaveChanges();
+
+                return true;
             }
 
             return false;

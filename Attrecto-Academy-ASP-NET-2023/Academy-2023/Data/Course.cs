@@ -8,9 +8,10 @@ namespace Academy_2023.Data
         public int? Id { get; set; }
 
         [StringLength(10)]
-        public string? Name { get; set; }
+        public string? Title { get; set; }
 
         [StringLength(50)]
         public string? Description { get; set; }
+        public string? Url { get; set; }
     }
 }
