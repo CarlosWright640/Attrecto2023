@@ -7,8 +7,7 @@ namespace Academy_2023.Repositories
 {
     public class CourseRepository
     {
-        public static List<Course> Courses = new List<Course>();
-        private readonly ApplicationDbContext _context = new ApplicationDbContext();
+        private ApplicationDbContext _context = new ApplicationDbContext();
 
         public IEnumerable<Course> GetAll()
         {
