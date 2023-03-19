@@ -13,5 +13,8 @@ namespace Academy_2023.Data
         [StringLength(50)]
         public string? Description { get; set; }
         public string? Url { get; set; }
+
+
+        public ICollection<User> Users { get; set; } = new HashSet<User>();     // navigation property
     }
 }
