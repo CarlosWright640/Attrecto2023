@@ -7,7 +7,12 @@ namespace Academy_2023.Repositories
 {
     public class CourseRepository
     {
-        private ApplicationDbContext _context = new ApplicationDbContext();
+        private ApplicationDbContext _context;
+
+        public CourseRepository(ApplicationDbContext context)
+        {
+            _context = context;
+        }
 
         public IEnumerable<Course> GetAll()
         {
@@ -26,20 +31,9 @@ namespace Academy_2023.Repositories
             _context.SaveChanges();
         }
 
-        public Course? Update(int id, Course data)
+        public void Update()
         {
-            var course = _context.Courses.FirstOrDefault(x => x.Id == id);
-
-            if (course != null)
-            {
-                course.Title = data.Title;
-                course.Description = data.Description;
-                course.Url = data.Url;
-
-                _context.SaveChanges();
-            }
-
-            return course;
+            _context.SaveChanges();
         }
 
 
