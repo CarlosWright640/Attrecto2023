@@ -54,7 +54,6 @@ namespace Academy_2023.Services
         }
 
         private CourseDto MapToDto(Course course) => new CourseDto { Id = course.Id, Title = course.Title, Description = course.Description, Url = course.Url};
-
         private Course MapToEntity(CourseDto courseDto) => new Course { Id = courseDto.Id, Title = courseDto.Title, Description = courseDto.Description, Url = courseDto.Url};
     }
 }

@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Academy_2023.Repositories
 {
-    public class CourseRepository
+    public class CourseRepository: ICourseRepository
     {
-        private ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
 
         public CourseRepository(ApplicationDbContext context)
         {

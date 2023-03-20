@@ -16,6 +16,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUserRepository, UserRepository>();                      // többnyire a service és repo layerek scoped élettartammal szerepelnek
 builder.Services.AddScoped<IUserService, UserService>();
 
+builder.Services.AddScoped<ICourseRepository, CourseRepository>();                      
+builder.Services.AddScoped<ICourseService, CourseService>();
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>                      // ez elterjedt db context konfiguráció
     options.UseSqlite(builder.Configuration.GetConnectionString("Default")));       // rövidítés connectionString elérésre, de mûködne section-ön keresztül is
 

@@ -1,11 +1,9 @@
-﻿using Academy_2023.Data;
-using Academy_2023.Dto;
-using Academy_2023.Repositories;
+﻿using Academy_2023.Dto;
 using Academy_2023.Services;
 using Academy_2023.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
-using System.Diagnostics.Metrics;
+
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -61,6 +59,7 @@ namespace Academy_2023.Controllers
 
             return course == null ? NotFound() : NoContent();
         }
+
         // DELETE api/<CourseController>/5
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
